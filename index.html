@@ -1,0 +1,78 @@
+<!-- https://scotch.io/tutorials/angularjs-best-practices-directory-structure -->
+<!DOCTYPE html>
+<html lang="en" ng-app="webApp">
+<head>
+<meta charset="UTF-8">
+<title>{{ title }}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- CDN -->
+<!-- <link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" media="screen" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+
+<!-- CSS Framework -->
+<link rel="stylesheet" media="screen" href="assets/libs/font-awesome-4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" media="screen" href="assets/libs/bootstrap-3.3.2-dist/css/bootstrap.min.css">
+
+<!-- Google Web Font -->
+<link rel="stylesheet" media="screen" href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+
+<!-- App Style -->
+<link rel="stylesheet" media="screen" href="assets/css/style.css">
+</head>
+<body>
+<!--Page View Start-->
+<div id="page-view" class="{{ pageClass }}">
+
+
+	<!--Navigation Starts-->
+	<nav class="site-navigation" site-navigation>
+		<h1 class="bradning"><a href="#/home"><span class="sr-only">Brand</span><i class="icon fa fa-html5"></i></a></h1>
+		<ul class="navigation">
+			<li><a href="#/home" ng-class=" (pageClass == 'page-home') ? 'active' : '' "><span class="sr-only">Home</span><i class="icon fa fa-home"></i></a></li>
+			<li><a href="#/blog" ng-class=" (pageClass == 'page-blog' || pageClass === 'page-blog page-blog-details' ) ? 'active' : '' "><span class="sr-only">Blog</span><i class="icon fa fa-rss"></i></a></li>
+			<li><a href="#/instagram" ng-class=" (pageClass == 'page-instagram') ? 'active' : '' "><span class="sr-only">Instagram</span><i class="icon fa fa-instagram"></i></a></li>
+		</ul>
+		<button class="ui-btn close-menu btn btn-default" role="button"><span class="sr-only">Menu</span><i class="icon fa fa-times"></i></button>
+		<button class="ui-btn open-menu btn btn-default" role="button"><span class="sr-only">Menu</span><i class="icon fa fa-bars"></i></button>
+	</nav>
+	<!--Navigation Ends-->
+
+
+	<!--Content View Starts-->
+	<ng-view></ng-view>
+	<!--Content View Ends-->
+
+
+</div>
+<!--Page View Ends-->
+
+<!-- CDN -->
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-sanitize.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-animate.js"></script> -->
+
+<!-- Angular -->
+<script type="text/javascript" src="assets/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="assets/libs/angularjs/1.3.13/angular.min.js"></script>
+<script type="text/javascript" src="assets/libs/angularjs/1.3.13/angular-sanitize.js"></script>
+<script type="text/javascript" src="assets/libs/angularjs/1.3.13/angular-route.js"></script>
+<script type="text/javascript" src="assets/libs/angularjs/1.3.13/angular-animate.js"></script>
+
+<!-- Plugin -->
+<script type="text/javascript" src="assets/libs/angularjs/ng-simplePagination/simplePagination.js"></script>
+
+
+<!-- App JS -->
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/directives.js"></script>
+<script type="text/javascript" src="app/services.js"></script>
+<script type="text/javascript" src="app/controllers.js"></script>
+</body>
+</html>
